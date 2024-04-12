@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function exploreMaze(mazeSize) {
+            let position = 1;
+
+            while (position < mazeSize) {
+
+                if (position % 3 === 0) { 
+                    console.log("X - перед вами перешкода")
+                    console.log(`Обхід перешкоди на позиції: ` + position);
+                } else {
+                    console.log(`Ви рухаєтеся вперед, ваша поточна позиція ` + position);
+                }
+                position++;
+            }
+
+            console.log("Вітаємо! Ви пройшли лабіринт, тепер повернення назад");
+
+            do {
+                position--;
+                console.log(`Ви рухаєтесь назад та знаходитесь на позиції: ` + position );
+            } while (position > 1);
+
+            console.log("Вітаємо, ви на стартовому положенні");
+        }
+
+        exploreMaze(7);
+    </script>
+</body>
+</html>
